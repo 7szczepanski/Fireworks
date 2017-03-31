@@ -19,7 +19,7 @@ Particle::Particle(float x, float y, bool fw, float coli)
 {
 	done = false;
 	col = coli;
-	point.setRadius(4);
+	point.setRadius(8);
 	lifespan = 255;
 	isfir = fw;
 	this->pos.x = x;
@@ -41,10 +41,10 @@ Particle::~Particle()
 
 void Particle::update() {
 	if (!isfir) {
-		vel *= 0.998f;
+		//vel *= 0.998f;
 		acc.y += 0.0001;
 		lifespan -= 1;
-		point.setRadius(2);
+		point.setRadius(4);
 		this->point.setFillColor((setColor(col, 1, 1, lifespan)));
 	}
 	this->vel += this->acc;

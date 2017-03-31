@@ -28,7 +28,7 @@ int main()
 			if (event.type == sf::Event::Closed)
 				window.close();
 		}
-		if (rand() % 90 + 1 == 3) {
+		if (rand() % 110 + 1 == 3) {
 			Firework firework(width, height);
 			fireworks.push_back(firework);
 		}

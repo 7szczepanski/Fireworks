@@ -54,7 +54,7 @@ void Firework::show(sf::RenderWindow &target, sf::Vector2f gravity) {
 
 void Firework::explode() {
 	if (exploded && !fireworkbom) {
-		for (int i = 0; i < (int)unirandi(50, 200); i++) {
+		for (int i = 0; i < (int)unirandi(25, 200); i++) {
 			shared_ptr<Particle> p(new Particle(this->firework->pos.x, this->firework->pos.y, false, col));
 			explosion.push_back(p);
 		}
